@@ -27,7 +27,7 @@ public class JdbcTest {
 			
 			// 4. Process the result set
 			while (myRs.next()) {
-				System.out.println(myRs.getString("last_name") + ", " + myRs.getString("first_name"));
+				System.out.println(myRs.getString("last_name") + ", " + myRs.getString("email"));
 			}
 		}
 		catch (Exception exc) {
