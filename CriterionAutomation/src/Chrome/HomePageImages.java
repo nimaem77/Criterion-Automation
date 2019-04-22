@@ -25,7 +25,7 @@ public class HomePageImages {
 
 	    driver = new ChromeDriver();
 
-	    baseUrl = "https://www.criterion.com/";
+	    baseUrl = "https://www.criterion.com";
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  }
 
