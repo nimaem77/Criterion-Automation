@@ -6,6 +6,7 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+//Devoted to Methods that can be used throughout the project
 public class HelperMethods {
  	
 	  private boolean acceptNextAlert = true;
