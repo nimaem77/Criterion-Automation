@@ -44,7 +44,7 @@ public class HomeSocialMediaLinks {
 
 	}
 
-	
+	//twitter
 	@Test
 	public void testB() throws Exception {
 		driver.findElement(By.xpath("//a[@href='https://twitter.com/Criterion']")).click();
@@ -59,6 +59,8 @@ public class HomeSocialMediaLinks {
 		assertTrue(url.equals("https://twitter.com/Criterion"));
 
 	}
+	
+	//tumblr
 	@Test
 	public void testC() throws Exception {
 		driver.findElement(By.xpath("//a[@href='http://criterioncollection.tumblr.com/']")).click();
@@ -73,6 +75,8 @@ public class HomeSocialMediaLinks {
 		assertTrue(url.equals("https://criterioncollection.tumblr.com/"));
 
 	}
+	
+	//youtube
 	@Test
 	public void testD() throws Exception {
 		Thread.sleep(600);

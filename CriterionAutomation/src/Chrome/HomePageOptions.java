@@ -37,6 +37,7 @@ public class HomePageOptions {
 
 	  }
 	  
+	  //Test of all clickable links on home page
 	  //Shop the collection
 	  @Test
 	  public void testCollectionHomePageScrollTestA() throws Exception {

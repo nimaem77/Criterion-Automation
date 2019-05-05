@@ -33,8 +33,6 @@ public class HomePageImages {
 		driver = new ChromeDriver();
 
 	}
-	
-	
 
 	@Test
 	public void testA() throws Exception {
@@ -45,13 +43,13 @@ public class HomePageImages {
 				By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='My Criterion'])[2]/following::img[1]"))
 				.click();
 		Thread.sleep(1000);
-		 ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
-		    driver.switchTo().window(tabs.get(1));
-		  String url =  driver.getCurrentUrl();
-			Thread.sleep(1000);
-		    driver.switchTo().window(tabs.get(0));	  
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		String url = driver.getCurrentUrl();
+		Thread.sleep(1000);
+		driver.switchTo().window(tabs.get(0));
 
-		  assertTrue(url.equals("http://www.janusfilms.com/"));
+		assertTrue(url.equals("http://www.janusfilms.com/"));
 
 	}
 
@@ -61,9 +59,9 @@ public class HomePageImages {
 				By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='My Criterion'])[2]/following::img[2]"))
 				.click();
 		Thread.sleep(1000);
-		 ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
-		    driver.switchTo().window(tabs.get(2));
-		  String url =  driver.getCurrentUrl();
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(2));
+		String url = driver.getCurrentUrl();
 		assertTrue(url.equals("https://www.criterionchannel.com/"));
 
 	}
