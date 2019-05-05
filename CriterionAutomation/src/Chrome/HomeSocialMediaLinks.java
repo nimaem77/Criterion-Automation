@@ -77,12 +77,12 @@ public class HomeSocialMediaLinks {
 	public void testD() throws Exception {
 		Thread.sleep(600);
 		driver.findElement(By.xpath("//a[@href='https://www.youtube.com/user/criterioncollection']")).click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		 ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 		    driver.switchTo().window(tabs.get(4));
 		  String url =  driver.getCurrentUrl();
 			Thread.sleep(1000);
-
+			System.out.println(url);
 		    driver.switchTo().window(tabs.get(0));	  
 		assertTrue(url.equals("https://www.youtube.com/user/criterioncollection"));
 
