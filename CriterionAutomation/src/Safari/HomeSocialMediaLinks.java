@@ -6,43 +6,58 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchSessionException;
 import org.openqa.selenium.safari.SafariDriver;
 
 import Helper.HelperMethods;
 
-/**
- * @author homefolder
- *
- */
-public class HomePageImages {
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class HomeSocialMediaLinks {
 	private static SafariDriver driver;
-	private StringBuffer verificationErrors = new StringBuffer();
 
 	@BeforeClass
 	public static void setUp() throws Exception {
 		System.setProperty("webdriver.safari.noinstall", "true"); // To stop uninstall each time
 		driver = new SafariDriver();
-		driver.get("https://www.criterion.com");
-
+		driver.get("https://criterion.com");
 	}
 
 	@Test
 	public void testA() throws Exception {
 
-		Thread.sleep(300);
-		assertTrue(HelperMethods.isElementPresent(
-				By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='My Criterion'])[2]/following::img[1]"),
+		assertTrue(HelperMethods.isElementPresent(By.xpath("//a[@href='https://twitter.com/Criterion']"), driver));
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+	}
+
+	// twitter
+	@Test
+	public void testB() throws Exception {
+
+		assertTrue(HelperMethods.isElementPresent(By.xpath("//a[@href='https://twitter.com/Criterion']"), driver));
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+	}
+
+	// tumblr
+	@Test
+	public void testC() throws Exception {
+		assertTrue(HelperMethods.isElementPresent(By.xpath("//a[@href='http://criterioncollection.tumblr.com/']"),
 				driver));
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 	}
 
+	// youtube
 	@Test
-	public void testB() throws Exception {
-		assertTrue(HelperMethods.isElementPresent(By.xpath("//a[@href='https://www.criterionchannel.com/']"), driver));
+	public void testD() throws Exception {
+
+		assertTrue(HelperMethods
+				.isElementPresent(By.xpath("//a[@href='https://www.youtube.com/user/criterioncollection']"), driver));
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 	}
@@ -55,5 +70,4 @@ public class HomePageImages {
 		} catch (NoSuchSessionException ex) {
 		}
 	}
-
 }

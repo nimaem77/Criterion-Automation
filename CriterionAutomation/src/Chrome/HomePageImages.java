@@ -34,6 +34,7 @@ public class HomePageImages {
 
 	}
 
+	//janus films
 	@Test
 	public void testA() throws Exception {
 
@@ -53,6 +54,7 @@ public class HomePageImages {
 
 	}
 
+	//criterionchannel
 	@Test
 	public void testB() throws Exception {
 		driver.findElement(
