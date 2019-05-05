@@ -1,22 +1,15 @@
 package FireFox;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import Helper.HelperMethods;
@@ -32,7 +25,6 @@ public class HomePageOptions {
 	public static void setUp() throws Exception {
 		System.setProperty("webdriver.gecko.driver", "/Users/homefolder/Desktop/JavaCode/geckodriver");
 		driver = new FirefoxDriver();
-
 
 	}
 
