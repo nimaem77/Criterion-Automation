@@ -6,6 +6,7 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 //Devoted to Methods that can be used throughout the project and it is instructional!
 public class HelperMethods {
@@ -54,4 +55,13 @@ public class HelperMethods {
 		      return false;
 		    }
 		  }
+
+	public static boolean isElementPresent(By by, SafariDriver driver) {
+		try {
+		      driver.findElement(by);
+		      return true;
+		    } catch (NoSuchElementException e) {
+		      return false;
+		    }
+	}
 }
